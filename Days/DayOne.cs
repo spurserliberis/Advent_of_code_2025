@@ -46,40 +46,78 @@ public class DayOne
             
             if (letter == 'L')
             {
-                dial -= number;
+                // dial -= number;
                 // When going left from 0 the numbers restart from 99
                 // When the dial is less than 0 start from 99 and continue with rotation
                 // wrap below 0
                 // if the dial goes below zero, do not go into negative numbers, instead add 100
                 // Use a while, so if the subtracted number is larger than 100, it will rotate for any number of subtractions
                 // i.e if only acts once, whereas while will keep adding 100 until it is no longer below 0.
+
                 
-                // Amend it so that it add every times it passes 0
-                while (dial < 0)
+                // while (dial < 0)
+                // {
+                //     dial += 100;
+                // }
+                //
+
+                // PART TWO: each time the dial clicks past 0 during a rotation or at the end, increment password
+                for (int click = 0; click < number; click++)
                 {
-                    dial += 100;
-                    // For part two add one to password each time the dials passes 0
-                    password++;
+                    // decrement dial by one, rather than by the number as seen in the while loop in part one
+                    dial --;
+                    if (dial < 0)
+                    {
+                        // Anytime the dial reaches 0, the dial returns to 99 and starts to decrement again from 99
+                        dial = 99;
+                    }
+
+                    if (dial == 0)
+                    {
+                        password++;
+                    }
                 }
 
             }
             else
             {
-                dial += number;
+                // dial += number;
                 // when going right from 99 the dial resets to 0
-                while (dial > 99)
+                // while (dial > 99)
+                // {
+                //     dial -= 100;
+                // }
+                
+                // PART TWO: each time the dial clicks past 0 during a rotation or at the end, increment password
+                for (int click = 0; click < number; click++)
                 {
-                    dial -= 100;
-                    // For part two add one to password each time the dials passes 0
-                    password++;
+                    // increment dial by one, rather than the number as seen in the while loop in part one
+                    dial ++;
+                    if (dial > 99)
+                    {
+                        // Anytime the dial reaches 99, the dial returns to 0
+                        dial = 0;
+                        // as it lands on zero above, it also counts as a zero click
+                        password++;
+                        // skip the next if block. If dial is greater than 99 it is reset to  0, that meets the criteria for the if 
+                        // block below, so that same zero click is counted twice
+                        continue;
+                    }
+
+                    if (dial == 0)
+                    {
+                        password++;
+                    }
                 }
+                
             }
 
+            // FOR PART ONE
             // When dial hits zero add one to password
-            if (dial == 0)
-            {
-                password++;
-            }
+            // if (dial == 0)
+            // {
+            //     password++;
+            // }
 
         }
         return password;
