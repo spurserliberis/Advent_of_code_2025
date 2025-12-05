@@ -1,0 +1,16 @@
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/DayOneScenario.GeneratedMSBuildEditorConfig.editorconfig
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/DayOneScenario.AssemblyInfoInputs.cache
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/DayOneScenario.AssemblyInfo.cs
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/DayOneScenario.csproj.CoreCompileInputs.cache
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/DayOneScenario.sourcelink.json
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/bin/Debug/net9.0/DayOneScenario
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/bin/Debug/net9.0/DayOneScenario.deps.json
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/bin/Debug/net9.0/DayOneScenario.runtimeconfig.json
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/bin/Debug/net9.0/DayOneScenario.dll
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/bin/Debug/net9.0/DayOneScenario.pdb
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/DayOneScenario.dll
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/refint/DayOneScenario.dll
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/DayOneScenario.pdb
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/DayOneScenario.genruntimeconfig.cache
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/obj/Debug/net9.0/ref/DayOneScenario.dll
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/DayOneScenario/bin/Debug/net9.0/PuzzleInput.txt

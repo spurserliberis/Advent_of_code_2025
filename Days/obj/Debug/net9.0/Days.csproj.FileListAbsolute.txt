@@ -1,0 +1,16 @@
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/Days.GeneratedMSBuildEditorConfig.editorconfig
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/Days.AssemblyInfoInputs.cache
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/Days.AssemblyInfo.cs
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/Days.csproj.CoreCompileInputs.cache
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/Days.sourcelink.json
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/bin/Debug/net9.0/PuzzleInput.txt
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/bin/Debug/net9.0/Days
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/bin/Debug/net9.0/Days.deps.json
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/bin/Debug/net9.0/Days.runtimeconfig.json
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/bin/Debug/net9.0/Days.dll
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/bin/Debug/net9.0/Days.pdb
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/Days.dll
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/refint/Days.dll
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/Days.pdb
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/Days.genruntimeconfig.cache
+/Users/solmazpurser/RiderProjects/Advent_of_code_2025/Days/obj/Debug/net9.0/ref/Days.dll
