@@ -1,4 +1,7 @@
-namespace DefaultNamespace;
+using System.Linq;
+using System;
+
+namespace Days;
 
 public class DayTwo
 {
@@ -40,16 +43,33 @@ public class DayTwo
                 // Converts the result into a List<string>.
                 .Split('\n', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
                 .ToList();
+
         }
     }
 
-    public int SolveDayTwoPuzzle()
+    public List<string> SolveDayTwoPuzzle()
     {
-        // csv, separate each pair to those within commas
+        // Step 1: Flatten comma-separated ranges into a single list of ints
+        var productId = productIdRanges
+            .SelectMany(x => x.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
+            .ToList();
         
         // find all the ids within the pairs, including the first and last ids
+        foreach (var id in productId)
+        {
+            // find all the ids within the pairs, including the first and last ids
+            var idRange = productId.Split("-");
+            var start = int.Parse(id[0]);
+            var end   = int.Parse(id[1]);
+        
+            // start is the starting number, the second number is the count which is found with end - start + 1
+            return Enumerable.Range(start, end - start + 1).ToList();
+        }
+        
         // if any of the ids contain a sequence of digits repeated twice add to invalidIds
         // return the sum of the invalidIds
+
+        return productId;
     }
 
 }

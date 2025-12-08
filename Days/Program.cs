@@ -1,6 +1,5 @@
 using System;
 using Days;
-using DefaultNamespace;
 
 namespace DaysApp
 {
@@ -23,7 +22,7 @@ namespace DaysApp
         static void RunDayTwo()
         {
             var solver = new DayTwo();  // reads ../Inputs/PuzzleInput.txt
-            int result = solver.SolveDayTwoPuzzle();
+            var result = solver.SolveDayTwoPuzzle();
             Console.WriteLine($"Day 2 Result: {result}");
         }
     }

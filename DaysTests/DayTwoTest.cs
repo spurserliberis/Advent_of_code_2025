@@ -1,4 +1,3 @@
-using DefaultNamespace;
 using Xunit;
 using System.Collections;
 using Days;
@@ -29,17 +28,32 @@ public class DayTwoTest : IClassFixture<PuzzleFixture>
     }
     
     [Fact]
-    public void GetThePuzzleInputAndReturnTheFirstElement()
+    public void GetThePuzzleInputAndReturnAndCountArray()
     {
         // Arrange
         var dayTwo = new DayTwo(_mockPuzzles);
 
         // Act
         dayTwo.SolveDayTwoPuzzle();
-        var firstElement = _mockPuzzles[0];
+        var result = _mockPuzzles;
 
         // Assert
-        Assert.Equal("11-22", firstElement);
+        Assert.Equal(10, result.Count);
 
     }
+    
+    [Fact]
+    public void GetThePuzzleInput()
+    {
+        // Arrange
+        var dayTwo = new DayTwo(_mockPuzzles);
+    
+        // Act
+        
+    
+        // Assert
+    
+    
+    }
+
 }
