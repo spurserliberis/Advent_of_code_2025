@@ -22,8 +22,13 @@ public class DayOne
         }
         else
         {
-            var raw = File.ReadAllText("PuzzleInput.txt");
+            var raw = File.ReadAllText("../Inputs/PuzzleInput.txt");
             this.puzzles = raw
+            // Takes the contents of the input file (raw).
+            // Splits it into separate lines on newline characters ('\n').
+            // Removes any empty lines.
+            // Trims whitespace from each line.
+            // Converts the result into a List<string>.
                 .Split('\n', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
                 .ToList();
         }

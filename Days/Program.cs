@@ -1,7 +1,30 @@
-﻿// See https://aka.ms/new-console-template for more information
+using System;
 using Days;
+using DefaultNamespace;
 
-var dayOne = new DayOne();
-int password = dayOne.SolvePuzzle();
+namespace DaysApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // For running manually
+            RunDayOne();
+            RunDayTwo();
+        }
 
-Console.WriteLine($"Password: {password}");
+        static void RunDayOne()
+        {
+            var solver = new DayOne();  // reads ../Inputs/PuzzleInput.txt
+            int result = solver.SolvePuzzle();
+            Console.WriteLine($"Day 1 Result: {result}");
+        }
+        
+        static void RunDayTwo()
+        {
+            var solver = new DayTwo();  // reads ../Inputs/PuzzleInput.txt
+            int result = solver.SolveDayTwoPuzzle();
+            Console.WriteLine($"Day 2 Result: {result}");
+        }
+    }
+}

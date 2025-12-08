@@ -1,0 +1,45 @@
+using DefaultNamespace;
+using Xunit;
+using System.Collections;
+using Days;
+using Moq;
+using Assert = Xunit.Assert;
+
+namespace DaysTests;
+
+// Use IClassFixture to create a single shared instance of a fixture for all tests within this class
+public class PuzzleFixture
+{
+    public List<string> MockPuzzles { get; } = new()
+    {
+        "11-22","998-1012","1188511880-1188511890","222220-222224",
+        "1698522-1698528","446443-446449","38593856-38593862","565653-565659",
+        "824824821-824824827","2121212118-2121212124"
+    };
+}
+
+// Test class uses PuzzleFixture as a shared resource, creates once instance of PuzzleFixture and uses it for all tests
+public class DayTwoTest : IClassFixture<PuzzleFixture>
+{
+    private readonly List<string> _mockPuzzles;
+
+    public DayTwoTest(PuzzleFixture fixture)
+    {
+        _mockPuzzles = fixture.MockPuzzles;
+    }
+    
+    [Fact]
+    public void GetThePuzzleInputAndReturnTheFirstElement()
+    {
+        // Arrange
+        var dayTwo = new DayTwo(_mockPuzzles);
+
+        // Act
+        dayTwo.SolveDayTwoPuzzle();
+        var firstElement = _mockPuzzles[0];
+
+        // Assert
+        Assert.Equal("11-22", firstElement);
+
+    }
+}
