@@ -11,7 +11,7 @@ public class PuzzleFixture
 {
     public List<string> MockPuzzles { get; } = new()
     {
-        "11-22","998-1012","1188511880-1188511890","222220-222224",
+        "11-22","95-115,", "998-1012","1188511880-1188511890","222220-222224",
         "1698522-1698528","446443-446449","38593856-38593862","565653-565659",
         "824824821-824824827","2121212118-2121212124"
     };
@@ -38,22 +38,51 @@ public class DayTwoTest : IClassFixture<PuzzleFixture>
         var result = _mockPuzzles;
 
         // Assert
-        Assert.Equal(10, result.Count);
+        Assert.Equal(11, result.Count);
 
     }
     
+    // [Fact]
+    // public void GetThePuzzleInputAndReturnTheCorrectOutputForPartOne()
+    // {
+    //     // Arrange
+    //     var dayTwo = new DayTwo(_mockPuzzles);
+    //
+    //     // Act
+    //     var result = dayTwo.SolveDayTwoPuzzle();
+    //
+    //     // Assert
+    //     Assert.Equal(1227775554, result);
+    //     
+    // }
+    
     [Fact]
-    public void GetThePuzzleInput()
+    public void GetThePuzzleInputAndReturnTheCorrectOutputForPartTwo()
     {
         // Arrange
         var dayTwo = new DayTwo(_mockPuzzles);
     
         // Act
-        
+        var result = dayTwo.SolveDayTwoPuzzle();
     
         // Assert
-    
-    
+        Assert.Equal(4174379265, result);
+        
     }
-
+    
+    [Fact]
+    public void GetThePuzzleInputAndReturnInvalidIdWhereDigitsAreRepeatedAtLeastTwice()
+    {
+        // return all invalid ids
+        // Arrange
+        var dayTwo = new DayTwo(_mockPuzzles);
+    
+        // Act
+        var result = dayTwo.SolveDayTwoPuzzle();
+        var expected = dayTwo.ContainsRepeatedSequence(result);
+    
+        // Assert
+        Assert.Equal(expected);
+        
+    }
 }

@@ -22,7 +22,7 @@ namespace DaysApp
         static void RunDayTwo()
         {
             var solver = new DayTwo();  // reads ../Inputs/PuzzleInput.txt
-            var result = solver.SolveDayTwoPuzzle();
+            long result = solver.SolveDayTwoPuzzle();
             Console.WriteLine($"Day 2 Result: {result}");
         }
     }
