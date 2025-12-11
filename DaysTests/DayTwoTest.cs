@@ -56,6 +56,21 @@ public class DayTwoTest : IClassFixture<PuzzleFixture>
     //     
     // }
     
+    [Xunit.Theory]
+    [InlineData(11)]             // "1" repeated twice
+    [InlineData(1212)]           // "12" repeated twice
+    [InlineData(123123)]         // "123" repeated twice
+    [InlineData(111111)]         // "1" repeated six times
+    [InlineData(565656)]         // "56" repeated three times
+    [InlineData(824824824)]      // "824" repeated three times
+    [InlineData(2121212121)]     // "21" repeated five times
+    public void ContainsRepeatedSequenceShouldReturnTrueForInvalidRepeatedIds(long id)
+    {
+        var dayTwo = new DayTwo(_mockPuzzles);
+        bool result = dayTwo.ContainsRepeatedSequence(id);
+        Assert.True(result);
+    }
+    
     [Fact]
     public void GetThePuzzleInputAndReturnTheCorrectOutputForPartTwo()
     {
@@ -69,20 +84,5 @@ public class DayTwoTest : IClassFixture<PuzzleFixture>
         Assert.Equal(4174379265, result);
         
     }
-    
-    [Fact]
-    public void GetThePuzzleInputAndReturnInvalidIdWhereDigitsAreRepeatedAtLeastTwice()
-    {
-        // return all invalid ids
-        // Arrange
-        var dayTwo = new DayTwo(_mockPuzzles);
-    
-        // Act
-        var result = dayTwo.SolveDayTwoPuzzle();
-        var expected = dayTwo.ContainsRepeatedSequence(result);
-    
-        // Assert
-        Assert.Equal(expected);
-        
-    }
+
 }

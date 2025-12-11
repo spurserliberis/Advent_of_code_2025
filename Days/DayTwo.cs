@@ -1,6 +1,7 @@
 using System.Linq;
 using System;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 namespace Days;
 
@@ -70,6 +71,7 @@ public class DayTwo
                         invalidIds.Add(num);
                 }
                 
+                
             }
             
         }
@@ -106,24 +108,40 @@ public class DayTwo
     // Now, an ID is invalid if it is made only of some sequence of digits repeated at least twice. So, 12341234 (1234 two times), 123123123 (123 three times), 1212121212 (12 five times), and 1111111 (1 seven times) are all invalid IDs.
     public bool ContainsRepeatedSequence(long id)
     {
-        // convert into string to make it easier to iterate and compare numbers
         string s = id.ToString();
-        // Store number of digits in a string i.e 55 is n = 2
+        // stores the number of digits in the id
         int n = s.Length;
 
-        // valid lengths of X are any divisor of n where X is repeated exactly twice
-        if (n % 2 != 0)
-            // because s must be exactly X + X, if a number is repeated the count is an even number
-            return false;
+        // Loops through every possible length of a repeating substring
+        // len represents the size of the candidate block and only checks up to n/2 as a repeating block must be smaller
+        // than the whole string
+        // Example: For "123123" (length 6), candidate chunk sizes are: 1, 2, 3
+        for (int len = 1; len <= n / 2; len++)
+        {
+            // The total length must be a multiple of the candidate block size
+            // The full length must divide evenly by the block length
+            if (n % len != 0)
+                continue;
 
-        // X must be exactly half of the length for pattern X+X
-        int k = n / 2;
+            // extract the first len digits as the repeating block
+            string block = s.Substring(0, len);
 
-        // left half is from index 0 to k, which is exactly half
-        string left = s.Substring(0, k);
-        string right = s.Substring(k, k);
+            // Build a repeated version of the block
+            // Determines how many times the block must repeat to match the full length
+            // Example: n = 6, len = 3 → repeatCount = 2
+            int repeatCount = n / len;
+            // Rebuilds a string by repeating the block the necessary number of times.
+            // Example: block = "123", repeatCount = 2 → "123123"
+            string repeated = string.Concat(Enumerable.Repeat(block, repeatCount));
+            
+            // Checks if the rebuilt "XXX" string matches the original.
+            // If yes → the ID is made of repeated blocks → invalid.
+            if (repeated == s)
+                return true;
+        }
 
-        return left == right;
+        return false; // valid: no repeated sequence found
+        
     }
 
 }
