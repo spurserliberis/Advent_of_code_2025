@@ -10,6 +10,7 @@ namespace DaysApp
             // For running manually
             RunDayOne();
             RunDayTwo();
+            RunDayThree();
         }
 
         static void RunDayOne()
@@ -21,9 +22,16 @@ namespace DaysApp
         
         static void RunDayTwo()
         {
-            var solver = new DayTwo();  // reads ../Inputs/PuzzleInput.txt
+            var solver = new DayTwo();
             long result = solver.SolveDayTwoPuzzle();
             Console.WriteLine($"Day 2 Result: {result}");
+        }
+        
+        static void RunDayThree()
+        {
+            var solver = new DayThree();
+            var result = solver.SolveDayThreePuzzle();
+            Console.WriteLine($"Day 3 Result: {result}");
         }
     }
 }
